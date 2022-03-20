@@ -101,7 +101,10 @@ SSH into the control node and follow the steps below:
 Playbooks used:
 - [Ansible Filebeats Playbook](https://github.com/rkyletodd/scripts-Project-1/blob/main/ansible-linux/filebeat-playbook.yml)
 - [Ansible Metricbeats Playbook](https://github.com/rkyletodd/scripts-Project-1/blob/main/ansible-linux/metricbeat-playbook.yml)
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Note: These files should be copied to your /etc/ansible/roles directory of your Ansible container.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+File to update to make Ansible run the playbook on a specific machine, and how to specify which machine to install the ELK server on versus which to install Filebeat:
+- Update Ansible hosts file (found at /etc/ansible/hosts) to specify different groups of machines where you want to run the playbook. 
+- Verify the ELK server is working correctly by navigating to http://[your.ELK-VM.External.IP]:5601/app/kibana
+
+
