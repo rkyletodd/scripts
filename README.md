@@ -26,9 +26,10 @@ Load balancing ensures that the application will be highly available and redunda
 - Load balancers distribute traffic between the network servers, ensuring a balance and that no one server is being overwhelmed with requests.
 - The purpose of the Jump Box Provisioner is to be as a gateway and location of the Ansible container. Jumpbox is where Ansible playbooks are deployed; specifically installing the DVWA containers, metricbeat, and filebeat on each DVWA VM, as well as the ELK Stack container on the ELK-Server VM.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-Load balancers distribute traffic between the network servers, ensuring a balance and that no one server is being overwhelmed with requests.
-The purpose of the Jump Box Provisioner is to be as a gateway and location of the Ansible container. Jumpbox is where Ansible playbooks are deployed; specifically installing the DVWA containers, metricbeat, and filebeat on each DVWA VM, as well as the ELK Stack container on the ELK-Server VM.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
+
+- Filebeat monitors log files, collects log events, and then passes them on to elasticsearch for indexing purposes.
+- Metricbeat collects data and metrics from the system and services running on one's server, and sends them to elasticsearch.
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
