@@ -23,12 +23,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available and redundant, in addition to restricting access to the network.
-- Load balancers distribute traffic between servers, ensuring that no one server is being overwhelmed with requests.
-- The purpose of the Jump Box Provisioner is to both act as a gateway, as well as holding the Ansible container with which we were able to deploy ansible playbooks; specifically installing the DVWA containers, metricbeat, and filebeat on each DVWA VM, as well as the ELK Stack container on the ELK-Server VM.
+- Load balancers distribute traffic between the network servers, ensuring a balance and that no one server is being overwhelmed with requests.
+- The purpose of the Jump Box Provisioner is to be as a gateway and location of the Ansible container. Jumpbox is where Ansible playbooks are deployed; specifically installing the DVWA containers, metricbeat, and filebeat on each DVWA VM, as well as the ELK Stack container on the ELK-Server VM.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-Load balancers distribute traffic between servers, ensuring that no one server is being overwhelmed with requests.
-The purpose of the Jump Box Provisioner is to both act as a gateway, as well as holding the Ansible container with which we were able to deploy ansible playbooks; specifically installing the DVWA containers, metricbeat, and filebeat on each DVWA VM, as well as the ELK Stack container on the ELK-Server VM.
+Load balancers distribute traffic between the network servers, ensuring a balance and that no one server is being overwhelmed with requests.
+The purpose of the Jump Box Provisioner is to be as a gateway and location of the Ansible container. Jumpbox is where Ansible playbooks are deployed; specifically installing the DVWA containers, metricbeat, and filebeat on each DVWA VM, as well as the ELK Stack container on the ELK-Server VM.
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
