@@ -45,19 +45,21 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 
+- 73.201.121.83 (Workstation)
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by JumpBox.
+- The Elk-VM (10.1.0.4) is accessible using SSH from the JumpBox VM, and also from the user's workstation in order to access the Kibana application via Port 5601.
+- The DWVA machines are accessible using HTTP from the workstation, but only through the load balancer (20.127.90.70).
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-
+|    Name    | Publicly Accessible? |                    Allowed IP Addresses                    |
+|:----------:|:--------------------:|:----------------------------------------------------------:|
+| JumpBox VM |          Yes         |                        73.201.121.83                       |
+| ELK Server |          Yes         | 73.201.121.83, 10.0.0.5, 10.0.0.6, <br> 10.0.0.7, 10.0.0.9 |
+|   Web1 VM  |          No          |                   20.127.90.70, 10.0.0.5                   |
+|   Web2 VM  |          No          |                   20.127.90.70, 10.0.0.5                   |
+|  Web3 VM   |          No          |                   20.127.90.70, 10.0.0.5                   |
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
