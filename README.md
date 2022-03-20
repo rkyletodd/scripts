@@ -62,13 +62,15 @@ A summary of the access policies in place can be found in the table below.
 |  Web3 VM   |          No          |                   20.127.90.70, 10.0.0.5                   |
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because automating the configuration allows more flexibility for future updates, enables easy reproduction for future similar tasks, and reduces the likelihood of future mistakes in the configurations.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install docker.io
+- Install python3-pip
+- Install docker module
+- Increase the amount of virtual memory and uses that additional memory, by setting the vm.max_map_count to 262144.
+- Download and launch the docker elk container
+- Use systemd to enable docker service on boot, so that docker does not require restart every time the machine restarts.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
